@@ -6,7 +6,7 @@
 /*   By: lasalced <lasalced@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 11:45:11 by lasalced          #+#    #+#             */
-/*   Updated: 2014/11/05 17:23:03 by lasalced         ###   ########.fr       */
+/*   Updated: 2014/11/05 18:27:00 by lasalced         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 # include <string.h>
 
 int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+int		ft_toupper(int c);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strdup(const char *s1);
