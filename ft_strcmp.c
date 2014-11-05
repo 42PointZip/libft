@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lasalced <lasalced@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/04 13:04:24 by lasalced          #+#    #+#             */
-/*   Updated: 2014/11/05 14:15:14 by lasalced         ###   ########.fr       */
+/*   Created: 2014/11/05 12:15:46 by lasalced          #+#    #+#             */
+/*   Updated: 2014/11/05 12:28:28 by lasalced         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
-char	*ft_strncpy(char *dst, const char *src, size_t n)
+int		ft_strcmp(const char *s1, const char *s2)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	while (src[i] && i < n)
-	{
-		dst[i] = src[i];
+	while ((s1[i] == s2[i]) && (s1[i] != '\0' && s2[i] != '\0'))
 		i++;
-	}
-	while (i < n)
-	{
-		dst[i] = '\0';
-		i++;
-	}
-	return (dst);
+	return (s1[i] - s2[i]);
 }
