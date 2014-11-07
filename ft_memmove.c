@@ -6,7 +6,7 @@
 /*   By: lasalced <lasalced@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 15:31:50 by lasalced          #+#    #+#             */
-/*   Updated: 2014/11/07 14:05:52 by lasalced         ###   ########.fr       */
+/*   Updated: 2014/11/07 16:39:11 by lasalced         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,22 @@
 
 void			*ft_memmove(void *dst, const char *src, size_t len)
 {
-	char		*d;
-	char		temp;
-	size_t		i;
+	unsigned char		*ptrdst;
+	const unsigned char	*ptrsrc;
 
-	d = dst;
-	i = 0;
-	temp = src;
-	if (len == 0)
+	if (!len)
 		return (dst);
-	if (temp < d)
+	ptrdst = (unsigned char *)dst;
+	ptrsrc = (const unsigned char *)src;
+	if (ptrsrc < ptrdst)
 	{
-		d = d + len;
-		temp = temp + len;
-		while (len > i)
-		{
-			d[i] = temp[i];
-			i++;
-		}
+		ptrdst += len;
+		ptrsrc += len;
+		while (len--)
+			*--ptrdst = *--ptrsrc;
 	}
+	else
+		while (len--)
+			*ptrdst++ = *ptrsrc++;
 	return (dst);
 }
