@@ -6,7 +6,7 @@
 /*   By: lasalced <lasalced@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 11:45:11 by lasalced          #+#    #+#             */
-/*   Updated: 2014/11/07 14:08:48 by lasalced         ###   ########.fr       */
+/*   Updated: 2014/11/07 14:58:05 by lasalced         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
+int		ft_tolower(int c);
 int		ft_atoi(const char *str);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
