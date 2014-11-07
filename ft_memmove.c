@@ -1,42 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lasalced <lasalced@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/05 15:34:28 by lasalced          #+#    #+#             */
-/*   Updated: 2014/11/07 14:08:10 by lasalced         ###   ########.fr       */
+/*   Created: 2014/11/06 15:31:50 by lasalced          #+#    #+#             */
+/*   Updated: 2014/11/07 14:05:52 by lasalced         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <string.h>
+#include "stdlib.h"
 
-char		*ft_strnstr(const char *s1, const char *s2, size_t n)
+void			*ft_memmove(void *dst, const char *src, size_t len)
 {
-	size_t	i;
-	size_t	j;
+	char		*d;
+	char		temp;
+	size_t		i;
 
+	d = dst;
 	i = 0;
-	j = 0;
-	if (s2[j] == '\0')
-		return ((char*)s1);
-	while (i < n && s1[i])
+	temp = src;
+	if (len == 0)
+		return (dst);
+	if (temp < d)
 	{
-		if (s1[i] == s2[j])
+		d = d + len;
+		temp = temp + len;
+		while (len > i)
 		{
-			while (s1[i] == s2[j] && s1[i] && s2[j] && i < n)
-			{
-				i++;
-				j++;
-			}
-			if (s2[j] == '\0')
-				return ((char*)s1 + i - j);
-			i--;
-			j = 0;
+			d[i] = temp[i];
+			i++;
 		}
-		i++;
 	}
-	return (NULL);
+	return (dst);
 }

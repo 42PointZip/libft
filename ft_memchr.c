@@ -1,42 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lasalced <lasalced@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/05 15:34:28 by lasalced          #+#    #+#             */
-/*   Updated: 2014/11/07 14:08:10 by lasalced         ###   ########.fr       */
+/*   Created: 2014/11/06 16:25:10 by lasalced          #+#    #+#             */
+/*   Updated: 2014/11/07 13:54:46 by lasalced         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 
-char		*ft_strnstr(const char *s1, const char *s2, size_t n)
+void			*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
-	size_t	j;
+	const char	*d;
+	size_t		i;
 
+	d = s;
 	i = 0;
-	j = 0;
-	if (s2[j] == '\0')
-		return ((char*)s1);
-	while (i < n && s1[i])
+	if (n > 0)
 	{
-		if (s1[i] == s2[j])
+		while (n > i)
 		{
-			while (s1[i] == s2[j] && s1[i] && s2[j] && i < n)
-			{
-				i++;
-				j++;
-			}
-			if (s2[j] == '\0')
-				return ((char*)s1 + i - j);
-			i--;
-			j = 0;
+			if (d[i] == (unsigned char)c)
+				return (&s + i);
+			i++;
 		}
-		i++;
 	}
 	return (NULL);
 }

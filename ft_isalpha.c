@@ -6,7 +6,7 @@
 /*   By: lasalced <lasalced@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 17:13:55 by lasalced          #+#    #+#             */
-/*   Updated: 2014/11/05 17:23:42 by lasalced         ###   ########.fr       */
+/*   Updated: 2014/11/07 14:02:20 by lasalced         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ int		ft_isalpha(int c)
 	if (c >= 65 && c <= 90)
 		return (1);
 	if (c >= 97 && c <= 122)
-   		return (1);
+		return (1);
 	return (0);
 }

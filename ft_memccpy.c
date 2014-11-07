@@ -1,42 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lasalced <lasalced@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/05 15:34:28 by lasalced          #+#    #+#             */
-/*   Updated: 2014/11/07 14:08:10 by lasalced         ###   ########.fr       */
+/*   Created: 2014/11/06 14:27:08 by lasalced          #+#    #+#             */
+/*   Updated: 2014/11/06 15:21:58 by lasalced         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 
-char		*ft_strnstr(const char *s1, const char *s2, size_t n)
+void			*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	size_t	i;
-	size_t	j;
+	char		*d;
+	const char	*s;
+	size_t		i;
 
+	d = dst;
+	s = src;
 	i = 0;
-	j = 0;
-	if (s2[j] == '\0')
-		return ((char*)s1);
-	while (i < n && s1[i])
+	if (n > 0)
 	{
-		if (s1[i] == s2[j])
+		while (i < n)
 		{
-			while (s1[i] == s2[j] && s1[i] && s2[j] && i < n)
+			if (s[i] == (unsigned char)c)
 			{
-				i++;
-				j++;
+				d[i] = s[i];
+				return (dst + i + 1);
 			}
-			if (s2[j] == '\0')
-				return ((char*)s1 + i - j);
-			i--;
-			j = 0;
+			d[i] = s[i];
+			i++;
 		}
-		i++;
 	}
 	return (NULL);
 }
