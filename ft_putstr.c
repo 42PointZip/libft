@@ -6,7 +6,7 @@
 /*   By: lasalced <lasalced@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/10 09:03:20 by lasalced          #+#    #+#             */
-/*   Updated: 2014/11/10 09:09:52 by lasalced         ###   ########.fr       */
+/*   Updated: 2014/11/10 09:44:25 by lasalced         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_putstr(const char *s)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		write(1, s[i], 1);
+		write(1, &s[i], 1);
 		i++;
 	}
 }
