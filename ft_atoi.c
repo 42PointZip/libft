@@ -6,7 +6,7 @@
 /*   By: lasalced <lasalced@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 11:45:15 by lasalced          #+#    #+#             */
-/*   Updated: 2014/11/06 16:57:24 by lasalced         ###   ########.fr       */
+/*   Updated: 2014/11/10 12:56:19 by lasalced         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ int		ft_atoi(const char *str)
 	i = 0;
 	num = 0;
 	n = 1;
-	while (str[i] <= 32)
+	if (str[i] == '-' || str[i] == '\t' || str[i] == '\n' || str[i] == '\v' \
+			|| str[i] == '\f' || str[i] == '\r')
 		i++;
 	if (str[i] == 45 && str[i + 1] >= 48 && str[i + 1] <= 57)
 	{
