@@ -6,7 +6,7 @@
 #    By: lasalced <lasalced@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/10 11:28:18 by lasalced          #+#    #+#              #
-#    Updated: 2014/11/10 12:18:58 by lasalced         ###   ########.fr        #
+#    Updated: 2014/11/10 13:43:16 by lasalced         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,4 +22,59 @@ SRC	= 	ft_bzero.c ft_memset.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 		 ft_isdigit.c ft_isalnum.c ft_isalpha.c \
 		 ft_putchar.c ft_putstr.c ft_putnbr.c ft_putendl.c \
 		 ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
+
+c.c ft_memdel.c \
+			ft_strnew.c ft_strclr.c ft_strdel.c ft_strequ.c ft_striter.c \
+					ft_striteri.c ft_strjoin.c ft_strmap.c ft_strmapi.c ft_strnequ.c \
+							ft_strsplit.c ft_strsub.c ft_strtrim.c ft_itoa.c \
+									ft_putchar.c ft_putstr.c ft_putnbr.c ft_putendl.c \
+											ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
+													ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c \
+															ft_lstmap.c
+OBJ		= $(SRC:.c=.o)
+	CC		= gcc
+	FLAGS	= -Wall -Werror -Wextra
+
+ifeq ($(SYSTEM),Linux)
+		FBSD_addons=strlcat.c strnstr.c
+	endif
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+		@ar rc $(NAME) $(OBJ)
+			@ranlib $(NAME)
+
+%.o: %.c
+		@$(CC) -I . -o $@ -c $? $(FLAGS)
+
+dyn: 
+		@gcc -fPIC -Wall -Werror -Wextra -c $(SRC)
+			@gcc -fPIC -Werror -Wall -Wextra -shared -o libft.so $(OBJ)
+
+.PHONY: clean fclean re test1 dltest1 test2 dltest2 testall
+
+clean:
+		@rm -f $(OBJ)
+
+fclean: clean
+		@rm -f $(NAME)
+
+testall: test1 test2
+
+test1: $(NAME) main1.c
+		gcc -I . main1.c $(FBSD_addons) libft.a
+			./a.out
+
+test2: $(NAME) main2.c
+		gcc -I . main2.c $(FBSD_addons) libft.a
+			./a.out
+
+main1.c:
+		curl -s http://pastebin.com/raw.php?i=p3BBP70K > main1.c
+
+main2.c:
+		curl -s http://pastebin.com/raw.php\?i\=KQRs4L2H > main2.c
+
+re: fclean all
 
