@@ -6,7 +6,7 @@
 /*   By: lasalced <lasalced@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 11:45:11 by lasalced          #+#    #+#             */
-/*   Updated: 2014/11/07 17:13:04 by lasalced         ###   ########.fr       */
+/*   Updated: 2014/11/10 09:22:02 by lasalced         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,12 @@ void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memchr(const void *s, int c, size_t n);
+void	ft_putchar(char c);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr(const char *s);
+void	ft_putstr_fd(const char *s, int fd);
+void	ft_putendl(const char *s);
+void	ft_putendl_fd(const char *s, int fd);
 void	ft_bzero(void *s, size_t n);
 
 #endif
