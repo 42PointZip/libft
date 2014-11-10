@@ -6,7 +6,7 @@
 /*   By: lasalced <lasalced@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/10 09:18:09 by lasalced          #+#    #+#             */
-/*   Updated: 2014/11/10 09:23:05 by lasalced         ###   ########.fr       */
+/*   Updated: 2014/11/10 09:42:44 by lasalced         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	ft_putendl(const char *s)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		write(1, s[i], 1);
+		write(1, &s[i], 1);
 		i++;
 	}
-	write(1, '\n', 1);
+	write(1, "\n", 1);
 }
