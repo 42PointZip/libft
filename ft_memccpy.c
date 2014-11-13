@@ -6,7 +6,7 @@
 /*   By: lasalced <lasalced@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 14:27:08 by lasalced          #+#    #+#             */
-/*   Updated: 2014/11/06 15:21:58 by lasalced         ###   ########.fr       */
+/*   Updated: 2014/11/13 12:44:04 by lasalced         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 void			*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	char		*d;
-	const char	*s;
+	const unsigned	char	*s;
 	size_t		i;
 
 	d = dst;
