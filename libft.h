@@ -6,7 +6,7 @@
 /*   By: lasalced <lasalced@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 11:45:11 by lasalced          #+#    #+#             */
-/*   Updated: 2014/11/10 12:25:20 by lasalced         ###   ########.fr       */
+/*   Updated: 2014/11/14 13:41:31 by lasalced         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ char	*ft_strstr(const char *s1, const char *s2);
 char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+void	*ft_memalloc(size_t size);
+void	ft_memdel(void **ap);
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
