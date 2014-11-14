@@ -5,31 +5,35 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lasalced <lasalced@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/06 15:31:50 by lasalced          #+#    #+#             */
-/*   Updated: 2014/11/14 10:54:14 by lasalced         ###   ########.fr       */
+/*   Created: 2014/11/14 12:36:31 by lasalced          #+#    #+#             */
+/*   Updated: 2014/11/14 13:23:58 by lasalced         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdlib.h"
+#include "libft.h"
+#include <stdlib.h>
 
-void					*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char		*ptrdst;
-	const unsigned char	*ptrsrc;
+	size_t        i;
+	char const    *str;
+	char        *temp;
+	char        *s;
 
-	if (!len)
-		return (dst);
-	ptrdst = (unsigned char *)dst;
-	ptrsrc = (const unsigned char *)src;
-	if (ptrsrc < ptrdst)
+	i = 0;
+	str = src;
+	s = dst;
+	temp = (char*)malloc(sizeof(char) * ft_strlen(str));
+	while (str[i])
 	{
-		ptrdst += len;
-		ptrsrc += len;
-		while (len--)
-			*--ptrdst = *--ptrsrc;
+		temp[i] = str[i];
+		i++;
 	}
-	else
-		while (len--)
-			*ptrdst++ = *ptrsrc++;
+	i = 0;
+	while (i < len)
+	{
+		s[i] = temp[i];
+		i++;
+	}
 	return (dst);
 }
