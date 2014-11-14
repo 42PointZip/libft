@@ -6,19 +6,19 @@
 /*   By: lasalced <lasalced@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/14 12:36:31 by lasalced          #+#    #+#             */
-/*   Updated: 2014/11/14 13:23:58 by lasalced         ###   ########.fr       */
+/*   Updated: 2014/11/14 13:53:20 by lasalced         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void			*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t        i;
-	char const    *str;
-	char        *temp;
-	char        *s;
+	size_t		i;
+	char const	*str;
+	char		*temp;
+	char		*s;
 
 	i = 0;
 	str = src;
