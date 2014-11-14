@@ -6,7 +6,7 @@
 /*   By: lasalced <lasalced@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 17:13:33 by lasalced          #+#    #+#             */
-/*   Updated: 2014/11/08 12:41:29 by lasalced         ###   ########.fr       */
+/*   Updated: 2014/11/14 11:03:47 by lasalced         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	i = 0;
 	len_dst = ft_strlen(dst);
 	len_src = ft_strlen(src);
-
-	if	(len_dst > size)
+	if (len_dst > size)
 		return (len_src + size);
 	while ((len_dst + i < size - 1) && src[i] != '\0')
 	{
