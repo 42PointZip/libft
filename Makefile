@@ -6,7 +6,7 @@
 #    By: lasalced <lasalced@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/14 11:47:42 by lasalced          #+#    #+#              #
-#    Updated: 2014/11/20 07:44:51 by lasalced         ###   ########.fr        #
+#    Updated: 2014/11/20 11:20:26 by lasalced         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ SRC		= ft_toupper.c ft_tolower.c ft_strstr.c \
 		  ft_memcmp.c ft_memchr.c ft_memccpy.c ft_memset.c ft_isprint.c \
 		  ft_isdigit.c ft_isascii.c ft_isalpha.c ft_isalnum.c ft_bzero.c \
 		  ft_atoi.c ft_striteri.c ft_strmap.c ft_strmapi.c ft_strequ.c \
-		  ft_strnequ.c ft_strsub.c ft_strjoin.c
+		  ft_strnequ.c ft_strsub.c ft_strjoin.c ft_strtrim.c
 OBJ		= $(SRC:.c=.o)
 CC		= gcc
 FLAGS	= -Wall -Wextra -Werror
@@ -45,7 +45,7 @@ fclean: clean
 	@rm -f $(NAME)
 
 other: re $(NAME)
-	@$(CC) -I . $(NAME) main2.c
+	@$(CC) -I . -g $(NAME) main2.c
 	@./a.out
 
 testall: test1 test2
