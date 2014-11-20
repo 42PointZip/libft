@@ -6,9 +6,11 @@
 /*   By: lasalced <lasalced@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 13:21:54 by lasalced          #+#    #+#             */
-/*   Updated: 2014/11/04 14:05:43 by lasalced         ###   ########.fr       */
+/*   Updated: 2014/11/20 08:41:54 by lasalced         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strcat(char *s1, const char *s2)
 {
