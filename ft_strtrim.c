@@ -6,7 +6,7 @@
 /*   By: lasalced <lasalced@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/20 08:53:22 by lasalced          #+#    #+#             */
-/*   Updated: 2014/11/20 11:52:53 by lasalced         ###   ########.fr       */
+/*   Updated: 2014/11/21 16:17:09 by lasalced         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char		*ft_strtrim(char const *s)
 {
 	size_t	i;
 	size_t	k;
-	char 	*temp;
+	char	*temp;
 
 	i = 0;
 	if (!s)
