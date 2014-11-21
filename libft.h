@@ -6,7 +6,7 @@
 /*   By: lasalced <lasalced@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 11:45:11 by lasalced          #+#    #+#             */
-/*   Updated: 2014/11/20 08:53:50 by lasalced         ###   ########.fr       */
+/*   Updated: 2014/11/21 15:44:43 by lasalced         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(char const *s);
+char	**ft_strsplit(char const *s, char c);
+char	*ft_itoa(int n);
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 void	*ft_memalloc(size_t size);
