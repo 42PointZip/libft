@@ -6,7 +6,7 @@
 /*   By: lasalced <lasalced@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/17 10:07:11 by lasalced          #+#    #+#             */
-/*   Updated: 2014/11/17 10:24:26 by lasalced         ###   ########.fr       */
+/*   Updated: 2014/11/21 16:14:47 by lasalced         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_strequ(char const *s1, char const *s2)
 	if (!s1 || !s2)
 		return (0);
 	while ((s1[i] == s2[i]) && (s1[i] && s2[i]))
-			i++;
+		i++;
 	if (s1[i] != s2[i])
 		return (0);
 	else
