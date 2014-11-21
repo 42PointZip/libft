@@ -6,7 +6,7 @@
 /*   By: lasalced <lasalced@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/18 15:45:20 by lasalced          #+#    #+#             */
-/*   Updated: 2014/11/20 08:42:55 by lasalced         ###   ########.fr       */
+/*   Updated: 2014/11/21 16:15:57 by lasalced         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 		return (ft_strdup((char*)s1));
 	else if (!s1 && !s2)
 		return (NULL);
-	temp = ft_strnew(ft_strlen(s1) + ft_strlen(s2) + 1);	
+	temp = ft_strnew(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!temp)
 		return (NULL);
 	ret = temp;
@@ -31,4 +31,3 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	temp = ft_strcat(temp, s2);
 	return (ret);
 }
-
